@@ -1,0 +1,23 @@
+{
+  "name": "nice-weather",
+  "version": "1.0.0",
+  "description": "A weather web-app utilizing OpenWeatherMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "reload -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbt/nice-weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timbt/nice-weather/issues"
+  },
+  "homepage": "https://github.com/timbt/nice-weather#readme",
+  "devDependencies": {
+    "reload": "^2.2.2"
+  }
+}
