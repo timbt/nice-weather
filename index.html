@@ -3,6 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="Nice Weather - A simple weather viewer">
+      <script src='/scripts/index.js'></script>
       <title>Nice Weather</title>
     </head>
     <body>
@@ -12,8 +13,8 @@
       <nav>
       </nav>
       <main>
-          <form action="">
-            <input type="text" value="Enter a city..."></input>
+          <form onsubmit="handleForm();">
+            <input type="text" id="city-name" value="Enter a city..."></input>
             <button>Submit!</button>
           </form>
       </main>
