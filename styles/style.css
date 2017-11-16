@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+input, button {
+    border-radius: 1em;
+    font-size: 20px;
+}
