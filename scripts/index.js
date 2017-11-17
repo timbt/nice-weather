@@ -18,10 +18,10 @@ function renderResponse(cityName){
     var responseContainer = document.getElementById('response-container');
     if (!responseContainer) {
         renderNewResponse(cityName);
-    } 
+    }
     else {
         reRenderResponse(cityName);
-    } 
+    }
 }
 
 function handleForm(){
