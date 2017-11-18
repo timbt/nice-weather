@@ -5,5 +5,8 @@ function onClick(elementId, action) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-    onClick('btn', () => alert('hello!'));
+    onClick('btn', () => {
+        alert('hey there!');
+        console.log('pls work :(');
+    });
 });

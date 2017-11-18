@@ -1,7 +1,10 @@
+path = require('path');
+
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: './public/scripts/bundle.js',
+        path: path.join(__dirname, 'public/scripts/'),
+        filename: 'bundle.js',
         libraryTarget: 'var',
         library: 'ui'
     },
@@ -18,5 +21,12 @@ module.exports = {
             }
           }
         ]
+      },
+      devServer: {
+        contentBase: './public/',
+        port: 8080,
+        open: true,
+        watchContentBase: true,
+        publicPath: '/scripts/'
       }
 };
