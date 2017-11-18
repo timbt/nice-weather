@@ -1,5 +1,7 @@
 function onClick(elementId, action) {
-    document.getElementById(elementId).addEventListener('click', action);
+    document
+        .getElementById(elementId)
+        .addEventListener('click', action);
 }
 
 document.addEventListener('DOMContentLoaded', event => {
