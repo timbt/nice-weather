@@ -6,7 +6,7 @@
 
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link rel="stylesheet" href="/styles/style.css">
-      <script src='/scripts/index.js'></script>
+      <script src='/scripts/bundle.js'></script>
       <title>Nice Weather</title>
     </head>
     <body>
@@ -16,9 +16,9 @@
       <nav>
       </nav>
       <main>
-          <form onsubmit="handleForm(); return false;">
+          <form>
             <input type="text" id="city-name" placeholder="Enter a city..."></input>
-            <button>Submit!</button>
+            <button id="btn">Submit!</button>
           </form>
           <div id="response-area"></div>
       </main>
