@@ -5,7 +5,7 @@ function onClick(elementId, action) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-    onClick('btn', () => {
+    onClick('search-form-btn', () => {
         alert('hey there!');
         console.log('pls work :(');
     });
