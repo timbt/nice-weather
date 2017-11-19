@@ -6,17 +6,14 @@ function cleanContainer(container) {
     container.innerHTML = '';
 }
 
-export function renderLoading () {
-    var root = fetchElement('render-container');
+export function renderLoading (root) {
 
     var loadingMessage = createElement(
         'p',
         'loading-message',
         [],
-        textNode('Fetching data...')
+        textNode('Fetching weather data...')
     );
-    console.log('loading message...');
-    console.log(loadingMessage);
 
     var loadingContainer = createElement(
         'div',
@@ -24,8 +21,8 @@ export function renderLoading () {
         [],
         loadingMessage
     );
-    console.log('loading container...');
-    console.log(loadingContainer);
 
     root.appendChild(loadingContainer);
 }
+
+export function renderWeatherData () {}
