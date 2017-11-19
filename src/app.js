@@ -1,5 +1,5 @@
-import { fetchElement, onClick } from './util';
-import { renderLoading, renderWeatherData } from './render';
+import { fetchElement } from './util';
+import { renderLoading, renderData } from './render';
 
 
 export default function app () {
@@ -8,7 +8,7 @@ export default function app () {
     var root = fetchElement('render-container');
     if (location) {
         renderLoading(root);
-        renderWeatherData(root, { 'location': location});
+        renderData(root, { 'type': 'weather-data', 'location': location} );
     }
 
 }

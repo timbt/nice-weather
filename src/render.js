@@ -6,6 +6,28 @@ function cleanContainer(container) {
     container.innerHTML = '';
 }
 
+function renderWeatherData (root, data) {
+
+    var locationName = createElement(
+        'p',
+        'location-name',
+        [],
+        textNode(data.location)
+    );
+
+    root.appendChild(locationName);
+}
+
+export function renderData (root, data) {
+    
+    cleanContainer(root);
+
+    switch (data.type) {
+        case 'weather-data':
+            renderWeatherData(root, data);
+    }
+}
+
 export function renderLoading (root) {
     
     cleanContainer(root);
@@ -25,18 +47,4 @@ export function renderLoading (root) {
     );
 
     root.appendChild(loadingContainer);
-}
-
-export function renderWeatherData (root, data) {
-
-    cleanContainer(root);
-
-    var locationName = createElement(
-        'p',
-        'location-name',
-        [],
-        textNode(data.location)
-    );
-
-    root.appendChild(locationName);
 }
