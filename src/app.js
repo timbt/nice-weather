@@ -15,7 +15,7 @@ export default function app () {
         renderLoading();
 
         // Render the data.
-        fetchData(location, renderData);
+        fetchData(location);
     }
 
 }

@@ -7,7 +7,7 @@ function reqListener () {
     renderData(data);
 }
 
-export default function fetchData (location, root, action) {
+export default function fetchData (location) {
     let request = new XMLHttpRequest();
     let queryURL = 'http://192.168.1.2:3000/?' + createURLQuery({location: location});
     request.addEventListener('load', reqListener);
