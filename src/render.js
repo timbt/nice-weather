@@ -1,12 +1,14 @@
 import { fetchElement, createElement, textNode } from './util';
 
-// Function to empty the render container so that renderer function can start
+// Function to empty the render container so that a renderer function can start
 // with a clean container. 
 function cleanContainer(container) {
     container.innerHTML = '';
 }
 
 export function renderLoading (root) {
+    
+    cleanContainer(root);
 
     var loadingMessage = createElement(
         'p',
@@ -25,4 +27,16 @@ export function renderLoading (root) {
     root.appendChild(loadingContainer);
 }
 
-export function renderWeatherData () {}
+export function renderWeatherData (root, data) {
+
+    cleanContainer(root);
+
+    var locationName = createElement(
+        'p',
+        'location-name',
+        [],
+        textNode(data.location)
+    );
+
+    root.appendChild(locationName);
+}
