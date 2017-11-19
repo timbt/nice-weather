@@ -18,8 +18,8 @@ function renderWeatherData (root, data) {
     root.appendChild(locationName);
 }
 
-export function renderData (root, data) {
-    
+export function renderData (data) {
+    const root = fetchElement('render-container');
     cleanContainer(root);
 
     switch (data.type) {
@@ -28,8 +28,8 @@ export function renderData (root, data) {
     }
 }
 
-export function renderLoading (root) {
-    
+export function renderLoading () {
+    const root = fetchElement('render-container');
     cleanContainer(root);
 
     var loadingMessage = createElement(

@@ -39,3 +39,12 @@ export function createElement (
 
     return element;
 }
+
+export function createURLQuery (object) {
+    var query = [];
+    for(let property in object)
+      if (object.hasOwnProperty(property)) {
+        query.push(encodeURIComponent(property) + "=" + encodeURIComponent(object[property]));
+      }
+    return query.join("&");
+  }
